@@ -220,7 +220,7 @@ export default class View extends Component {
 
       // Share the selection with the rest of the world
       if (callback) {
-        callback(selection[0]);
+        callback(selection[0], { x, y });
       }
 
       if ('setProps' in this.props) {
@@ -250,7 +250,7 @@ export default class View extends Component {
 
       // Share the selection with the rest of the world
       if (this.props.onHover) {
-        this.props.onHover(selection[0]);
+        this.props.onHover(selection[0], { x, y });
       }
 
       if ('setProps' in this.props) {
